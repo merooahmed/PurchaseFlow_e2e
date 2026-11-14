@@ -1,0 +1,16 @@
+{
+  "register": {
+    "firstName": "Marwa",
+    "lastName": "Ahmed",
+    "birthDate": "2002-05-15",
+    "country": "EG",
+    "postalCode": "1111111",
+    "houseNumber": "15",
+    "street": "El Galaa Street",
+    "city": "Zagazig",
+    "state": "Sharqia",
+    "phone": "01012345678",
+    "password": "P@ssw0rd12323"
+  }
+  
+}
