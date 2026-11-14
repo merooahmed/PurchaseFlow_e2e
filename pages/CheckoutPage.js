@@ -1,6 +1,7 @@
 const { expect } = require("@playwright/test");
 const { User } = require("../data/user");
 const { LoginPage } = require("./LoginPage");
+const paymentData = require("../data/PaymentData.json");
 
 class CheckoutPage {
 
@@ -8,15 +9,15 @@ class CheckoutPage {
         this.page = page;
         this.userData = User.UserDataRegister();
 
-
         this.proceedToCheckoutButton = page.getByRole('button', {
             name: 'Proceed to checkout'
         });
-      //  this.proceedToCheckoutButton3 = page.getByTestId('proceed-3');
+        //  this.proceedToCheckoutButton3 = page.getByTestId('proceed-3');
 
         this.paymentMethodDropdown = page.getByTestId('payment-method');
         this.checkPaymentButton = page.getByRole('button', { name: 'Check payment' });
         this.confirmPaymentButton = page.getByRole('button', { name: 'Confirm' });
+        this.paymentSuccessMsg = page.getByTestId('payment-success-message');
 
 
         this.houseNumber = page.getByTestId("house_number");
@@ -82,6 +83,7 @@ class CheckoutPage {
         await expect(this.street).toHaveValue(this.userData.street);
         await expect(this.city).toHaveValue(this.userData.city);
         await expect(this.state).toHaveValue(this.userData.state);
+        await expect(this.paymentSuccessMsg).toHaveText(paymentData.paymentSuccessMsg);
 
         await expect(this.orderConfirmedMsg)
             .toContainText(/Thanks for your order! Your invoice number is INV-\d+/);

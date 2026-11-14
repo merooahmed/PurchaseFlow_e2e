@@ -4,13 +4,12 @@
     "lastName": "Ahmed",
     "birthDate": "2002-05-15",
     "country": "EG",
-    "postalCode": "1111111",
+    "postalCode": "11513",
     "houseNumber": "15",
-    "street": "El Galaa Street",
-    "city": "Zagazig",
-    "state": "Sharqia",
+    "street": "Ritchie Roads",
+    "city": "Jaquanstad",
+    "state": "West Virginia",
     "phone": "01012345678",
     "password": "P@ssw0rd12323"
   }
-  
 }
